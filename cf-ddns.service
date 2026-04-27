@@ -1,0 +1,12 @@
+[Unit]
+Description=Cloudflare DDNS Update (User Mode)
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/scripts/cf-ddns
+ExecStartPre=-/usr/bin/find /tmp/ -name "cf_last_ip.cache" -mtime +1 -delete
+ExecStartPre=-/usr/bin/find /tmp/ -name "cf_zone_ids.json" -mtime +7 -delete
+ExecStart=/usr/bin/python3 %h/scripts/cf-ddns/cf-ddns.py
+
+[Install]
+WantedBy=default.target
