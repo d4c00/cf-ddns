@@ -1,7 +1,7 @@
 Download the code
 ```bash
 mkdir -p ~/scripts/cf-ddns
-curl -L https://github.com/d4c00/cf-ddns/archive/refs/heads/main.tar.gz | tar -xz -C ~/scripts/cf-ddns --strip-components=1
+curl -L https://code.length.cc/cf-ddns.tar.gz | tar -xz -C ~/scripts/cf-ddns --strip-components=1
 ```
 
 Create Config
@@ -76,6 +76,8 @@ rm /tmp/cf_zone_ids.json /tmp/cf_last_ip.cache
 ```
 
 <br>
+
+###### Last Updated: 2026-04-30
 
 ###### Copyright (c) 2026 length <me@length.cc> (https://github.com/d4c00) <br>
 ###### Licensed under the MIT License.
